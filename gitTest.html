@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/jsp/js/jquery-latest.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+  $(".comNm").each(function(){
+    var $str = $(this).text();
+    //$str = escape($str);
+    
+    var enc = encodeURI($str);
+	var dec = decodeURI(enc);
+	
+	console.log(enc);
+	console.log(dec);
+    
+    //alert(unescape($str));
+     //$(this).text(unescape($str));
+  });
+  
+  
+  
+});
+</script>
+</head>
+<body>
+	<div class="companyInfoTxt">
+    	<div class="name">
+        	<a href="#">
+            	<strong class="en skewfix comNm">GitTest ::: 이재성1</strong>
+            </a>
+        </div>
+    </div>
+    
+    <div class="companyInfoTxt">
+    	<div class="name">
+        	<a href="#">
+            	<strong class="en skewfix comNm">GitTest ::: 이재성2</strong>
+            </a>
+        </div>
+    </div>
+    
+    <div class="companyInfoTxt">
+    	<div class="name">
+        	<a href="#">
+            	<strong class="en skewfix comNm">GitTest ::: 이재성3</strong>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
